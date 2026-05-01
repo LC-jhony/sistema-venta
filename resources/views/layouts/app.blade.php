@@ -49,6 +49,9 @@
             </main>
         </div>
     </div>
+    <x-dialog z-index="z-50" blur="md" align="center" />
+    <x-notifications position="bottom-end" />
+
     @stack('modals')
     @livewireScripts()
 </body>
