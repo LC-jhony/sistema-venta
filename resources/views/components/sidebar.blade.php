@@ -23,15 +23,12 @@
         <!-- Buscador Minimalista Redondeado -->
         <div class="mb-6 mt-2">
             <div x-data="{ q: '' }"
-                class="flex items-center gap-2.5 px-3.5 py-2 bg-stone-200/40 dark:bg-stone-800/40 rounded-xl border border-transparent focus-within:border-stone-300 dark:focus-within:border-stone-700 transition-all duration-300">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-stone-400 dark:text-stone-500">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                class="flex items-center gap-2 px-3 py-1.5 bg-stone-200/40 dark:bg-stone-800/40 rounded-lg border border-transparent focus-within:border-stone-300 dark:focus-within:border-stone-700 transition-all duration-300">
+                <svg class="w-4 h-4 text-stone-400 dark:text-stone-500 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                 </svg>
                 <input x-model="q" type="text" placeholder="Search..."
-                    class="flex-1 bg-transparent border-none outline-none text-[13px] font-medium text-stone-700 dark:text-stone-300 placeholder:text-stone-400 dark:placeholder:text-stone-600 focus:ring-0" />
+                    class="flex-1 bg-transparent border-none outline-none text-[13px] font-medium text-stone-700 dark:text-stone-300 placeholder:text-stone-400 dark:placeholder:text-stone-600 focus:ring-0 p-0" />
             </div>
         </div>
 
