@@ -13,5 +13,18 @@ new class extends Component {
             {{ __('Dashboard') }}
         </h2>
     </x-slot:header>
-    Welcome to your dashboard!
+    <x-container>
+        Welcome to your dashboard!
+        <x-alert title="Any Message!" />
+
+        <x-alert title="Any Message!" secondary />
+
+        <x-alert title="Success Message!" positive />
+
+        <x-alert title="Error Message!" negative />
+
+        <x-alert title="Alert Message!" warning />
+
+        <x-alert title="Information Message!" info />
+    </x-container>
 </div>

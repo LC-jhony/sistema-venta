@@ -15,6 +15,8 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <wireui:scripts />
+    @livewireStyles()
 </head>
 
 <body class="font-sans antialiased bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100">
@@ -27,19 +29,28 @@
                 {{ __('Dashboard') }}
             </x-nav-link>
         </x-sidebar>
-        <!-- Page Heading -->
-        <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
-            </div>
-        </header>
+        <div class="flex-1 flex flex-col min-w-0 bg-stone-50 dark:bg-stone-950">
+            <!-- Page Heading -->
+            @if (isset($header))
+                <header class="w-full bg-stone-50/50 dark:bg-stone-950/50 backdrop-blur-sm sticky top-0 z-20 ">
+                    <div class="mx-auto max-w-7xl py-5 px-6 sm:px-8 lg:px-10">
+                        <h1 class="text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 text-left">
+                            {{ $header }}
+                        </h1>
+                    </div>
+                </header>
+            @endif
 
-        <!-- Page Content -->
-        <main>
-            {{ $slot }}
-        </main>
+            <!-- Page Content -->
+            <main class="flex-1">
+                <div class="p-6 sm:p-8 lg:p-10">
+                    {{ $slot }}
+                </div>
+            </main>
+        </div>
     </div>
     @stack('modals')
+    @livewireScripts()
 </body>
 
 </html>

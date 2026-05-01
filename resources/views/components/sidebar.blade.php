@@ -1,6 +1,5 @@
 <div @click.away='open=false'
-    class='flex flex-col w-full text-stone-600 dark:text-stone-400
-         bg-stone-50 md:w-64 border-r border-stone-200 dark:bg-stone-950 dark:border-stone-800'
+    class='flex flex-col w-full text-stone-600 dark:text-stone-400 bg-stone-50 md:w-64 border-r border-stone-200 dark:bg-stone-950 dark:border-stone-800'
     x-data='{open: false}'>
 
     <div class='flex flex-row items-center justify-between px-4 py-4'>
